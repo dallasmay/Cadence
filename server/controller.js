@@ -13,6 +13,8 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     seed: (req, res) => {sequelize.query(`
+    DROP TABLE IF EXISTS famous_quotes;
+    
     CREATE TABLE famous_quotes (
         quote_id SERIAL PRIMARY KEY,
         quote VARCHAR(2000) NOT NULL,
@@ -20,6 +22,7 @@ module.exports = {
         source VARCHAR(300),
         category VARCHAR(100)
     );
+
     INSERT INTO famous_quotes (quote, speaker, source, category)
     VALUES ('You must never give in to despair. Allow yourself to slip down that road, and you surrender to your lowest instincts. In the darkest times, hope is something you give yourself. That is the meaning of inner strength', 'Iroh', 'Avatar the Last Airbender', 'Inspirational'),
     ('Sometimes the best way to solve your own problems is to help someone else', 'Iroh', 'Avatar the Last Airbender', 'Inspirational'),
@@ -32,7 +35,7 @@ module.exports = {
     ('If you look for the light, you can often find it. But if you look for the dark, that is all you will ever see', 'Iroh', 'Avatar the Last Airbender', 'Inspirational'),
     ('The greatest illusion of this world is the illusion of separation. Things you think are separate and different are actually one and the same. We are all one people, but we live as if divided', 'Guru Pathik', 'Avatar the Last Airbender', 'Inspirational'),
     ('When we hit our lowest point, we are open to the greatest change', 'Aang', 'Avatar the Last Airbender', 'Inspirational'),
-    ('I don't care what I look like. I'm not looking for anyone's approval. I know who I am', 'Toph', 'Avatar the Last Airbender', 'Inspirational'),
+    ('I don''t care what I look like. I''m not looking for anyone''s approval. I know who I am', 'Toph', 'Avatar the Last Airbender', 'Inspirational'),
     ('Happiness can be found, even in the darkest of times, if one only remembers to turn on the light', 'Albus Dumbledore', 'Harry Potter', 'Inspirational'),
     ('It is our choices that show what we truly are, far more than our abilities', 'Albus Dumbledore', 'Harry Potter', 'Inspirational'),
     ('Words are, in my not-so-humble opinion, our most inexhaustible source of magic. Capable of both inflicting injury, and remedying it', 'Albus Dumbledore', 'Harry Potter', 'Inspirational'),
@@ -46,11 +49,11 @@ module.exports = {
     ('Do not pity the dead. Pity the living, and above all, those who live without love', 'Albus Dumbledore', 'Harry Potter', 'Inspirational'),
     ('It is a curious thing, but perhaps those who are best suited to power are those who have never sought it', 'Albus Dumbledore', 'Harry Potter', 'Inspirational');
 
-    
-    
 `
-).then(() => {
-    console.log('Database seeded!')
-    res.sendStatus(200)
-}).catch(err => console.log('error seeding DB', err))}
+    ).then(() => {
+        console.log('Database seeded!')
+        res.sendStatus(200)
+    }).catch(err => console.log('error seeding DB', err))
+},
+
 }

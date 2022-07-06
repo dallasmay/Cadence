@@ -11,7 +11,8 @@ app.use(express.json());
 
 const {  seed  } = require("./controller")
 
-app.post("/test-seed", seed)
+// DEV
+app.post("/seed-my-database", seed)
 
 
 
