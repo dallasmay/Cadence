@@ -54,6 +54,15 @@ module.exports = {
         console.log('Database seeded!')
         res.sendStatus(200)
     }).catch(err => console.log('error seeding DB', err))
-},
+    },
+    getFamousQuote: (req, res) => {
+        sequelize.query(`SELECT * FROM famous_quotes
+                        ORDER BY RANDOM()
+                        LIMIT 1;`
+        ).then((dbRes) => {
+            console.log(dbRes[0][0].quote);
+            res.status(200).send();
+        })
+    }
 
 }
