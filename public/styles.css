@@ -13,7 +13,7 @@ a, a:hover, a:focus, a:active {
     justify-content: space-between;
     align-items: baseline;
     height: 90px;
-    background-color: #A9BCD0;
+    /* background-color: #A9BCD0; */
     border-radius: 0px 0px 20px 20px;
     /* border-bottom: solid 5px #1B1B1E; */
 }
@@ -24,6 +24,8 @@ a, a:hover, a:focus, a:active {
     padding-bottom: 3px;
     bottom: 10px;
     font-family: 'Charis SIL', serif;
+    font-size: 20px;
+    font-weight: bold;
     margin: 0px 30px 0px;
     color: #1B1B1E;
 }
@@ -63,4 +65,18 @@ a, a:hover, a:focus, a:active {
     font-size: 45pt;
     color: #1B1B1E;
     cursor: pointer;
+}
+.quote-container {
+    border: solid #1B1B1E;
+    border-radius: 10px;
+}
+#home-quote-flex-container {
+    display: flex;
+    justify-content: center;
+}
+#home-quote-container{
+    position: relative;
+    top: 15vh;
+    height: 70vh;
+    width: 90vw;
 }
