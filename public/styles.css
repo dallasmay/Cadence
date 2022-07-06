@@ -1,6 +1,8 @@
 body {
-    background-color: #F8F4E3;
-    /* background-color: #1B1B1E; */
+    /* background-color: #F8F4E3; */
+    /* background-color: #D8DBE2; */
+    font-family: 'Charis SIL', serif;
+    margin: 0px;
 }
 a, a:hover, a:focus, a:active {
     text-decoration: none;
@@ -10,7 +12,9 @@ a, a:hover, a:focus, a:active {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    height: 70px;
+    height: 90px;
+    background-color: #A9BCD0;
+    border-radius: 0px 0px 20px 20px;
     /* border-bottom: solid 5px #1B1B1E; */
 }
 
@@ -18,7 +22,7 @@ a, a:hover, a:focus, a:active {
     position: relative;
     display: inline-block;  /*Hover animation*/
     padding-bottom: 3px;
-    bottom: 20px;
+    bottom: 10px;
     font-family: 'Charis SIL', serif;
     margin: 0px 30px 0px;
     color: #1B1B1E;
@@ -45,15 +49,16 @@ a, a:hover, a:focus, a:active {
 
 #logo {
     position: relative;
-    bottom: 20px;
+    bottom: 10px;
     font-family: 'Charis SIL', serif;
     font-size: 45pt;
     color: #1B1B1E;
+    padding-left: 8px;
 }
 
 #logo:hover {
     position: relative;
-    bottom: 20px;
+    bottom: 10px;
     font-family: 'Charis SIL', serif;
     font-size: 45pt;
     color: #1B1B1E;
