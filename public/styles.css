@@ -110,3 +110,44 @@ a, a:hover, a:focus, a:active {
     transition-timing-function: ease-in;
     /* color: red; */
 }
+/* ------------------myQuotes specific styling----------------- */
+#control-bar {
+    border: solid cornflowerblue;
+    /* height: 40px; */
+    height: 5vh;
+    margin: 65px 35px 10px;
+}
+#my-quotes-container {
+    border: solid green;
+    /* height: 510px; */
+    height: 68vh;
+    margin: 10px 35px 0px
+    /* margin-left: 15px;
+    margin-right: 15px; */
+}
+.control-bar {
+    font-family: 'Charis SIL', serif;
+    font-size: 24pt;
+    font-weight: bold;
+}
+#control-bar-header {
+    display: inline;
+}
+#filter-form {
+    display: inline;
+}
+#control-bar-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#inputs-flex-container {
+    border: solid;
+    width: 30vw;
+    height: 3vh;
+    display: flex;
+    justify-content: space-around;
+}
+header {
+    border: solid ;
+}
