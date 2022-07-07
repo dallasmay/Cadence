@@ -9,7 +9,7 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     /* color: inherit; */
 }
-#wrapper {
+#nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -23,7 +23,7 @@ a, a:hover, a:focus, a:active {
     position: relative;
     display: inline-block;  /*Hover animation*/
     padding-bottom: 3px;
-    bottom: 10px;
+    bottom: 18px;
     font-family: 'Charis SIL', serif;
     font-size: 20px;
     font-weight: bold;
@@ -56,7 +56,7 @@ a, a:hover, a:focus, a:active {
     font-family: 'Charis SIL', serif;
     font-size: 45pt;
     color: #D8DBE2;
-    padding-left: 8px;
+    padding-left: 20px;
 }
 
 #logo:hover {
@@ -68,17 +68,45 @@ a, a:hover, a:focus, a:active {
     cursor: pointer;
 }
 .quote-container {
-    border: solid #1B1B1E;
-    /* border-radius: 10px; */
-    /* background-color: #1B1B1E; */
+    /* border: solid #1B1B1E; */
+    border-radius: 20px;
+    /* background-color: #373F51; */
 }
 #home-quote-flex-container {
     display: flex;
     justify-content: center;
 }
-#home-quote-container{
+#home-quote-container {
     position: relative;
-    top: 15vh;
-    height: 70vh;
+    padding: 10px;
+    top: 30vh;
+    height: 30vh;
     width: 90vw;
+    font-family: 'Joan', serif;
+    font-weight: 400;
+    font-size: 55px;
+    color: 1B1B1E;
+}
+.speaker {
+    font-family: 'Joan', serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+    padding-left: 100px;
+    padding-top: 35px;
+}
+.hidden {
+    /* color: blue; */
+    opacity: 0%;
+    transition-property: opacity;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-in;
+}
+.reveal {
+    opacity: 100%;
+    transition-property: opacity;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-in;
+    /* color: red; */
 }

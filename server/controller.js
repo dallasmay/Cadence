@@ -60,8 +60,7 @@ module.exports = {
                         ORDER BY RANDOM()
                         LIMIT 1;`
         ).then((dbRes) => {
-            console.log(dbRes[0][0].quote);
-            res.status(200).send();
+            res.status(200).send(dbRes[0][0]);
         })
     }
 

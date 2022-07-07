@@ -15,7 +15,7 @@ const {  seed, getFamousQuote  } = require("./controller")
 app.post("/seed-my-database", seed)
 
 // Famous Quote Endpoints
-app.get("/api/get_famous_quote", getFamousQuote)
+app.get("/api/get-famous-quote", getFamousQuote)
 
 
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
