@@ -1,7 +1,7 @@
 const myURL = "http://localhost:4000"
 let quoteContainer = document.getElementById("home-quote-container")
 let speakerContainer = document.getElementById("speaker-container")
-// let btn = document.getElementById("test")
+
 
 
 const getDisplayQuote = () => {
