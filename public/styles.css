@@ -153,7 +153,7 @@ header {
     border: solid ;
 }
 #add-quote-button {
-    font-family: 'Trebuchet MS', serif;
+    font-family: 'Helvetica', serif;
     font-size: 15pt;
     padding: 7px;
     padding-left: 25px;
@@ -164,7 +164,7 @@ header {
     height: 50px;
 }
 #add-quote-button:hover {
-    font-family: 'Trebuchet MS', serif;
+    font-family: 'Helvetica', serif;
     padding: 7px;
     padding-left: 25px;
     padding-right: 25px;
@@ -184,8 +184,87 @@ header {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
+  position: relative;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
-  height: 69%;
+  border-radius: 25px;
+  width: 17%;
+  height: 40%;
+  text-align: center;
+}
+.close {
+    position: absolute;
+    float: right;
+    right: 20px;
+    font-size: 32px;
+    border: solid;
+}
+h2 {
+    font-size: 36px;
+    color: #1B1B1E;
+}
+h3 {
+    font-size: 20px;
+    color: #1B1B1E;
+}
+#quote-input-container {
+    /* border: solid; */
+    position: relative;
+    text-align: left;
+    color: #1B1B1E;
+}
+#quote-input {
+    display: block;
+    resize: none;
+    height: 4em;
+    padding: 0px;
+    /* line-height: 4em; */
+}
+#speaker-input {
+    display: block;
+    resize: none;
+    height: 24px;
+    padding: 0px;
+}
+textarea {
+    font-family: Helvetica;
+    border: solid 1px #1B1B1E;
+    border-radius: 3px;
+    width: 100%;
+}
+#quote-label {
+    text-align: left;
+}
+.quote-input-label {
+    margin-bottom: 0px;
+}
+input {
+    width: 100%;
+}
+#button-flex-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 25px;
+}
+#submit-quote {
+    font-family: 'Helvetica', serif;
+    font-size: 15pt;
+    padding: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 8px;
+    background-color: #373F51;
+    color: #D8DBE2;
+    height: 50px;
+}
+#submit-quote:hover {
+    font-family: 'Helvetica', serif;
+    padding: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 8px;
+    background-color: #444e64;
+    color: #D8DBE2;
+    cursor: pointer;
 }

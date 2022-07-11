@@ -14,9 +14,22 @@
     <!-- Add Quote Modal -->
     <div id="add-quote-modal" class="modal">
         <div class="modal-content">
-                <span class="close">&times;</span>
+            <span class="close">&times;</span>
+            <h2>Add Quote</h2> 
+            <div id="quote-input-container">
+                <form>
+                    <h3 class="quote-input-label">Quote</h3>
+                    <textarea id="quote-input" type="text" aria-label="Quote Input" maxlength="2000"></textarea>
+                    <h3 class="quote-input-label">Speaker</h3> 
+                    <textarea id="speaker-input" type="text" aria-label="Speaker Input" maxlength="200"></textarea>
+                </form>
+                <div id="button-flex-container">
+                    <button id="submit-quote">Add</button>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- --------------- -->
     <nav>
         <div id="nav-wrapper">
             <a href="./home.html" id="logo">Cadence.</a>
