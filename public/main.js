@@ -1,7 +1,10 @@
 const myURL = "http://localhost:4000"
-let quoteContainer = document.getElementById("home-quote-container")
-let speakerContainer = document.getElementById("speaker-container")
-
+let quoteContainer = document.getElementById("home-quote-container");
+let speakerContainer = document.getElementById("speaker-container");
+let addQuoteModalBtn = document.getElementById("add-quote-button");
+let wrapperQuoteModal = document.getElementById("add-quote-modal");
+let closeBtn = document.getElementsByClassName("close")[0];
+let quoteModal = document.getElementsByClassName("modal")[0];
 
 
 const getDisplayQuote = () => {
@@ -54,5 +57,23 @@ function delay(n){
         setTimeout(resolve, n);
     });
 };
+
+const addQuoteModalToggle = () => {
+    quoteModal.style.display = "block"
+}
+
+const closeModal = (event) => {
+    if (event.target.id === "modal-close") {
+        quoteModal.style.display = "none";
+    }
+    if (event.target.id !== "add-quote-modal") {
+        return
+    }
+        quoteModal.style.display = "none";
+}
+
+addQuoteModalBtn.addEventListener("click", addQuoteModalToggle)
+closeBtn.addEventListener("click", closeModal)
+wrapperQuoteModal.addEventListener("click", closeModal)
+
 getDisplayQuote();
-// btn.addEventListener("click", getDisplayQuote)
