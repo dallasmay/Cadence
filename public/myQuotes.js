@@ -6,6 +6,7 @@ let quoteModal = document.getElementsByClassName("modal")[0];
 let addQuoteForm = document.getElementById("add-quote-form");
 let myQuoteContainer = document.getElementById("my-quotes-container");
 
+// MODAL FUNCTIONS
 const addQuoteModalToggle = () => {
     quoteModal.style.display = "block"
 }
@@ -20,6 +21,8 @@ const closeModal = (event) => {
         quoteModal.style.display = "none";
 }
 
+// AXIOS FUNCTIONS
+
 const postQuote = (e) => {
     e.preventDefault()
     let quoteContent = document.getElementById("quote-input").value;
@@ -31,7 +34,7 @@ const postQuote = (e) => {
     axios.post(`${myURL}/api/post-my-quote`, quoteObj)
     .then(() => {
     }).catch((err) => console.log(`This is an error${err})`))
-    
+    // CREATING CARD
     // Creating elements for card
     let container = document.createElement("div");
     let quoteContentDiv = document.createElement("div");
@@ -60,7 +63,44 @@ const postQuote = (e) => {
     quoteModal.style.display = "none";
 }
 
+const getAllMyQuotes = () => {
+    axios.get(`${myURL}/api/get-all-quotes`)
+    .then((res) => {
+        console.log(res.data)
+        let dbArr = res.data
+        for (let i = 0; i < dbArr.length; i++) {
+            const { quote, speaker } = dbArr[i];
+
+            // Creating elements for card
+            let container = document.createElement("div");
+            let quoteContentDiv = document.createElement("div");
+            let quoteWordsContent = document.createElement("p");
+            let speakerContentDiv = document.createElement("div");
+            let speakerWordsContent = document.createElement("p");
+            // Adding classes
+            container.classList.add("quote-card");
+            quoteContentDiv.classList.add("quote-content");
+            quoteWordsContent.classList.add("quote-words-content");
+            speakerContentDiv.classList.add("speaker-content");
+            speakerWordsContent.classList.add("speaker-p");
+            // Appending
+            quoteContentDiv.appendChild(quoteWordsContent);
+            container.appendChild(quoteContentDiv);
+            speakerContentDiv.appendChild(speakerWordsContent)
+            container.appendChild(speakerContentDiv);
+            // Adding text content
+            quoteWordsContent.textContent = `${quote}`;
+            speakerWordsContent.textContent = `${speaker}`
+            // Adding card to container
+            myQuoteContainer.appendChild(container)
+        }
+    })
+}
+
+
 addQuoteForm.addEventListener("submit", postQuote);
 addQuoteModalBtn.addEventListener("click", addQuoteModalToggle)
 closeBtn.addEventListener("click", closeModal)
 wrapperQuoteModal.addEventListener("click", closeModal)
+
+getAllMyQuotes();

@@ -97,7 +97,6 @@ a, a:hover, a:focus, a:active {
     padding-top: 35px;
 }
 .hidden {
-    /* color: blue; */
     opacity: 0%;
     transition-property: opacity;
     transition-duration: 0.9s;
@@ -108,7 +107,6 @@ a, a:hover, a:focus, a:active {
     transition-property: opacity;
     transition-duration: 0.9s;
     transition-timing-function: ease-in;
-    /* color: red; */
 }
 /* ------------------myQuotes specific styling----------------- */
 #control-bar {

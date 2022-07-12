@@ -69,7 +69,13 @@ module.exports = {
                         VALUES ($$${quote}$$, $$${speaker}$$);`
             ).then(() => {
             res.status(200).send()
-        })
+        }).catch((err) => console.log(`Error with postMyQuote: ${err}`))
+    },
+    getMyQuotes: (req, res) => {
+        sequelize.query(`SELECT * FROM test_user`
+        ).then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        }).catch((err) => console.log(`Error with getMyQuotes: ${err}`))
     }
 
 }
