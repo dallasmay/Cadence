@@ -54,7 +54,10 @@ const postQuote = (e) => {
     speakerWordsContent.textContent = `${speakerContent}`
     // Adding card to container
     myQuoteContainer.appendChild(container)
-    
+    // Clearing content after submit and closing modal
+    document.getElementById("quote-input").value = "";
+    document.getElementById("speaker-input").value = "";
+    quoteModal.style.display = "none";
 }
 
 addQuoteForm.addEventListener("submit", postQuote);
