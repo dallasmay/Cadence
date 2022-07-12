@@ -68,34 +68,46 @@ const getAllMyQuotes = () => {
     .then((res) => {
         console.log(res.data)
         let dbArr = res.data
-        for (let i = 0; i < dbArr.length; i++) {
-            const { quote, speaker } = dbArr[i];
-
-            // Creating elements for card
-            let container = document.createElement("div");
-            let quoteContentDiv = document.createElement("div");
-            let quoteWordsContent = document.createElement("p");
-            let speakerContentDiv = document.createElement("div");
-            let speakerWordsContent = document.createElement("p");
-            // Adding classes
-            container.classList.add("quote-card");
-            quoteContentDiv.classList.add("quote-content");
-            quoteWordsContent.classList.add("quote-words-content");
-            speakerContentDiv.classList.add("speaker-content");
-            speakerWordsContent.classList.add("speaker-p");
-            // Appending
-            quoteContentDiv.appendChild(quoteWordsContent);
-            container.appendChild(quoteContentDiv);
-            speakerContentDiv.appendChild(speakerWordsContent)
-            container.appendChild(speakerContentDiv);
-            // Adding text content
-            quoteWordsContent.textContent = `${quote}`;
-            speakerWordsContent.textContent = `${speaker}`
-            // Adding card to container
-            myQuoteContainer.appendChild(container)
-        }
-    })
+        async function displayCardAnimation() {
+            for (let i = 0; i < dbArr.length; i++) {
+                const { quote, speaker } = dbArr[i];
+                let delayTime = 100;
+                // Creating elements for card
+                let container = document.createElement("div");
+                let quoteContentDiv = document.createElement("div");
+                let quoteWordsContent = document.createElement("p");
+                let speakerContentDiv = document.createElement("div");
+                let speakerWordsContent = document.createElement("p");
+                // Adding classes
+                container.classList.add("quote-card");
+                container.classList.add("hidden");
+                quoteContentDiv.classList.add("quote-content");
+                quoteWordsContent.classList.add("quote-words-content");
+                speakerContentDiv.classList.add("speaker-content");
+                speakerWordsContent.classList.add("speaker-p");
+                // Appending
+                quoteContentDiv.appendChild(quoteWordsContent);
+                container.appendChild(quoteContentDiv);
+                speakerContentDiv.appendChild(speakerWordsContent);
+                container.appendChild(speakerContentDiv);
+                // Adding text content
+                quoteWordsContent.textContent = `${quote}`;
+                speakerWordsContent.textContent = `${speaker}`;
+                // Adding card to container
+                myQuoteContainer.appendChild(container);
+                await delay(delayTime);
+                container.classList.toggle("reveal")
+            };
+        };
+        displayCardAnimation();
+    });
 }
+// Setting up time delay function, makes setTimeout function run synchronously
+function delay(n){
+    return new Promise(function(resolve){
+        setTimeout(resolve, n);
+    });
+};
 
 
 addQuoteForm.addEventListener("submit", postQuote);
