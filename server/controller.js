@@ -66,8 +66,8 @@ module.exports = {
     postMyQuote: (req, res) => {
         const { quote, speaker } = req.body
         sequelize.query(`INSERT INTO test_user (quote, speaker)
-                        VALUES (${quote}, ${speaker})
-        );`).then(() => {
+                        VALUES ($$${quote}$$, $$${speaker}$$);`
+            ).then(() => {
             res.status(200).send()
         })
     }

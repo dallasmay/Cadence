@@ -18,7 +18,7 @@ app.post("/seed-my-database", seed)
 app.get("/api/get-famous-quote", getFamousQuote)
 
 // My Quotes Endpoints
-app.get("/api/post-my-quote", postMyQuote)
+app.post("/api/post-my-quote", postMyQuote)
 
 
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
