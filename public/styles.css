@@ -285,7 +285,24 @@ input {
     transition-duration: 0.3s;
 }
 .quote-card {
-    border: solid;
-    width: 20%;
+    /* border: solid 2px; */
+    border-radius: 15px;
+    text-align: center;
+    width: 17%;
     margin: 5px;
+    padding-bottom: 5px;
+    background-color: #A9BCD0;
+    color: #1B1B1E;
+}
+.quote-content {
+    padding: 10px;
+}
+.speaker-content {
+    font-style: italic;
+}
+.speaker-p {
+    margin-top: 0px;
+}
+.quote-words-content {
+    margin-bottom: 2px;
 }
