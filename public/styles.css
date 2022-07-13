@@ -346,7 +346,9 @@ input {
 #find-quotes-filter-form {
     display: inline;
     position: relative;
-    left: 100px;
+    float: right;
+    right: 15px;
+    top: 15px;
 }
 .find-quote-card {
     /* border: solid 2px; */
@@ -367,17 +369,19 @@ input {
     padding-top: 10px;
     height: 68vh;
     margin: 10px 35px 0px;
+    overflow: auto;
 }
 #search-button {
     font-family: 'Helvetica', serif;
-    font-size: 24pt;
+    font-size: 12pt;
     padding: 7px;
     padding-left: 25px;
     padding-right: 25px;
     border-radius: 15px;
+    margin-left: 10px;
     background-color: #1B1B1E;
     color: #D8DBE2;
-    height: 50px;
+    /* height: 50px; */
     border: none;
 }
 #search-button:hover {
@@ -389,4 +393,17 @@ input {
     background-color: #313136;
     color: #D8DBE2;
     cursor: pointer;
+}
+#find-quotes-control-bar {
+    height: 5vh;
+    margin: 65px 35px 10px;
+}
+select {
+    font-family: 'Helvetica', serif;
+    background-color: #e3e7ee;
+    color: #1B1B1E;
+}
+.select-label {
+    margin: 0px 0px 0px 10px;
+    font-size: 14pt;
 }

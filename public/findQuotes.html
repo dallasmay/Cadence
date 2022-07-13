@@ -11,26 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Joan&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Add Quote Modal -->
-    <div id="add-quote-modal" class="modal">
-        <div class="modal-content">
-            <span id="modal-close" class="close">&times;</span>
-            <h2>Add Quote</h2> 
-            <div id="quote-input-container">
-                <form id="add-quote-form">
-                    <h3 class="quote-input-label">Quote</h3>
-                    <textarea id="quote-input" type="text" aria-label="Quote Input" maxlength="2000"></textarea>
-                    <h3 class="quote-input-label">Speaker</h3> 
-                    <textarea id="speaker-input" type="text" aria-label="Speaker Input" maxlength="200"></textarea>
-                    <div id="button-flex-container">
-                        <button id="submit-quote" type="submit">Add</button>
-                    </div>
-                </form>
-                
-            </div>
-        </div>
-    </div>
-    <!-- --------------- -->
     <nav>
         <div id="nav-wrapper">
             <a href="./home.html" id="logo">Cadence.</a>
@@ -40,16 +20,16 @@
             </span>
         </div>
     </nav>
-    <div id="control-bar">
+    <div id="find-quotes-control-bar">
         <header class="control-bar" id="control-bar-header">Find Quotes</header>
         <form id="find-quotes-filter-form">
-            <span>Source:</span>
+            <span class="select-label">Source:</span>
             <select id="sources-select">
                 <option>All</option>
                 <option>Avatar the Last Airbender</option>
                 <option>Harry Potter</option>
             </select>
-            <span>Speaker:</span>
+            <span class="select-label">Speaker:</span>
             <select id="speaker-select">
                 <option>All</option>
                 <option>Iroh</option>
@@ -59,7 +39,7 @@
                 <option>Albus Dumbledore</option>
             </select>
             <!-- <span>Category:</span> -->
-            <button type="submit">Search</button>
+            <button id="search-button" type="submit">Search</button>
         </form>
     </div>
     <div id="find-my-quotes-container">
