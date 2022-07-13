@@ -33,6 +33,13 @@ const postQuote = (e) => {
     };
     axios.post(`${myURL}/api/post-my-quote`, quoteObj)
     .then(() => {
+        let parentElement = container;
+        let refNode = quoteContentDiv;
+
+        let cardDelBtn = document.createElement("span");
+        cardDelBtn.classList.add("card-close")
+        cardDelBtn.innerHTML = "&times;"
+        parentElement.insertBefore(cardDelBtn, refNode)
     }).catch((err) => console.log(`This is an error${err})`))
     // CREATING CARD
     // Creating elements for card
