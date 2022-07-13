@@ -155,21 +155,22 @@ header {
 }
 #add-quote-button {
     font-family: 'Helvetica', serif;
-    font-size: 15pt;
+    font-size: 24pt;
     padding: 7px;
     padding-left: 25px;
     padding-right: 25px;
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: #373F51;
     color: #D8DBE2;
     height: 50px;
+    border: none;
 }
 #add-quote-button:hover {
     font-family: 'Helvetica', serif;
     padding: 7px;
     padding-left: 25px;
     padding-right: 25px;
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: #444e64;
     color: #D8DBE2;
     cursor: pointer;
@@ -287,14 +288,28 @@ input {
 }
 .quote-card {
     /* border: solid 2px; */
+    position: relative;
     border-radius: 15px;
     text-align: center;
-    width: 19%;
+    font-size: 13pt;
+    width: 16%;
     height: 45%;
     margin: 5px;
     padding-bottom: 5px;
     background-color: #A9BCD0;
     color: #1B1B1E;
+}
+.quote-card:hover .card-close {
+    display: inline;
+    position: absolute;
+    right: 10px;
+}
+.card-close {
+    display: none;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 .quote-content {
     padding: 10px;
@@ -308,3 +323,4 @@ input {
 .quote-words-content {
     margin-bottom: 2px;
 }
+

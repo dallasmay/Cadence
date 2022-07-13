@@ -91,8 +91,8 @@ const getAllMyQuotes = () => {
                 speakerContentDiv.appendChild(speakerWordsContent);
                 container.appendChild(speakerContentDiv);
                 // Adding text content
-                quoteWordsContent.textContent = `${quote}`;
-                speakerWordsContent.textContent = `${speaker}`;
+                quoteWordsContent.textContent = `"${quote}"`;
+                speakerWordsContent.textContent = `-${speaker}`;
                 // Adding card to container
                 myQuoteContainer.appendChild(container);
                 await delay(delayTime);
