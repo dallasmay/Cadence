@@ -76,6 +76,33 @@ module.exports = {
         ).then((dbRes) => {
             res.status(200).send(dbRes[0])
         }).catch((err) => console.log(`Error with getMyQuotes: ${err}`))
+    },
+    findQuotes: (req, res) => {
+        const { source, speakerVal } = req.body
+        console.log(req.body)
+        console.log(source)
+        console.log(speakerVal)
+        if (source === "All" && speakerVal === "All") {
+            sequelize.query(`SELECT * FROM famous_quotes`)
+            .then((dbRes) => {
+                res.status(200).send(dbRes[0]);
+            }).catch((err) => console.log(`There is an error with All & All search, ${err}`));
+        } else if (source === "All") {
+            sequelize.query(`SELECT * FROM famous_quotes WHERE speaker = '${speakerVal}'`)
+            .then((dbRes) => {
+                res.status(200).send(dbRes[0]);
+            }).catch((err) => console.log(`There is an error with Source: All & Speaker: Input search, ${err}`));
+        } else if (speakerVal === "All") {
+            sequelize.query(`SELECT * FROM famous_quotes WHERE source = '${source}'`)
+            .then((dbRes) => {
+                res.status(200).send(dbRes[0]);
+            }).catch((err) => console.log(`There is an error with Source: Input & Speaker: All search, ${err}`));
+        } else {
+            sequelize.query(`SELECT * FROM famous_quotes WHERE speaker = '${speakerVal}' AND source = '${source}'`)
+            .then((dbRes) => {
+                res.status(200).send(dbRes[0]);
+            }).catch((err) => console.log(`There is an error with Source: Input & Speaker: Input search, ${err}`));
+        }
     }
 
 }

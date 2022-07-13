@@ -44,22 +44,22 @@
         <header class="control-bar" id="control-bar-header">Find Quotes</header>
         <form id="find-quotes-filter-form">
             <span>Source:</span>
-            <select>
-                <option value="All Sources">All</option>
-                <option value="Avatar the Last Airbender">Avatar the Last Airbender</option>
-                <option value="Harry Potter">Harry Potter</option>
+            <select id="sources-select">
+                <option>All</option>
+                <option>Avatar the Last Airbender</option>
+                <option>Harry Potter</option>
             </select>
             <span>Speaker:</span>
-            <select>
-                <option value="All Speakers">All</option>
-                <option value="Iroh">Iroh</option>
-                <option value="Guru Pathik">Guru Pathik</option>
-                <option value="Aang">Aang</option>
-                <option value="Toph">Toph</option>
-                <option value="Albus Dumbledore">Albus Dumbledore</option>
+            <select id="speaker-select">
+                <option>All</option>
+                <option>Iroh</option>
+                <option>Guru Pathik</option>
+                <option>Aang</option>
+                <option>Toph</option>
+                <option>Albus Dumbledore</option>
             </select>
             <!-- <span>Category:</span> -->
-            <button>Filter</button>
+            <button type="submit">Search</button>
         </form>
     </div>
     <div id="find-my-quotes-container">
@@ -71,9 +71,17 @@
                 <p class="speaker-p">-Iroh</p>
             </div>
         </div>
+        <div class="find-quote-card">
+            <div class="quote-content">
+                <p class="quote-words-content">"You must never give in to despair. Allow yourself to slip down that road, and you surrender to your lowest instincts. In the darkest times, hope is something you give yourself. That is the meaning of inner strength"</p>
+            </div>
+            <div class="speaker-content">
+                <p class="speaker-p">-Iroh</p>
+            </div>
+        </div>
     </div>
 
 <script src="../node_modules/axios/dist/axios.min.js"></script>
-<script src="./myQuotes.js"></script>
+<script src="./findQuotes.js"></script>
 </body>
 </html>
