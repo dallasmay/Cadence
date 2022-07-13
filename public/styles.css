@@ -342,4 +342,29 @@ input {
     background: #1B1B1E; 
     border-radius: 10px;
   }
-
+/* ----------FIND QUOTES CSS---------- */
+#find-quotes-filter-form {
+    display: inline;
+    position: relative;
+    left: 100px;
+}
+.find-quote-card {
+    /* border: solid 2px; */
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 13pt;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    padding-bottom: 5px;
+    background-color: #1B1B1E;
+    /* background-color: #373F51; */
+    color: #D8DBE2;
+}
+#find-my-quotes-container {
+    border-top: solid 5px #1B1B1E;
+    padding-top: 10px;
+    height: 68vh;
+    margin: 10px 35px 0px;
+}

@@ -32,14 +32,16 @@ const postQuote = (e) => {
         speaker: `${speakerContent}`
     };
     axios.post(`${myURL}/api/post-my-quote`, quoteObj)
-    .then(() => {
-        let parentElement = container;
-        let refNode = quoteContentDiv;
+    .then((res) => {
+        // console.log(res)
+        // // Adding delete button when quote is added
+        // let parentElement = container;
+        // let refNode = quoteContentDiv;
 
-        let cardDelBtn = document.createElement("span");
-        cardDelBtn.classList.add("card-close")
-        cardDelBtn.innerHTML = "&times;"
-        parentElement.insertBefore(cardDelBtn, refNode)
+        // let cardDelBtn = document.createElement("span");
+        // cardDelBtn.classList.add("card-close")
+        // cardDelBtn.innerHTML = "&times;"
+        // parentElement.insertBefore(cardDelBtn, refNode)
     }).catch((err) => console.log(`This is an error${err})`))
     // CREATING CARD
     // Creating elements for card
@@ -73,7 +75,7 @@ const postQuote = (e) => {
 const getAllMyQuotes = () => {
     axios.get(`${myURL}/api/get-all-quotes`)
     .then((res) => {
-        console.log(res.data)
+        // console.log(res.data)
         let dbArr = res.data
         async function displayCardAnimation() {
             for (let i = 0; i < dbArr.length; i++) {
