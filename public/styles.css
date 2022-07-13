@@ -368,3 +368,25 @@ input {
     height: 68vh;
     margin: 10px 35px 0px;
 }
+#search-button {
+    font-family: 'Helvetica', serif;
+    font-size: 24pt;
+    padding: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 15px;
+    background-color: #1B1B1E;
+    color: #D8DBE2;
+    height: 50px;
+    border: none;
+}
+#search-button:hover {
+    font-family: 'Helvetica', serif;
+    padding: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 15px;
+    background-color: #313136;
+    color: #D8DBE2;
+    cursor: pointer;
+}
