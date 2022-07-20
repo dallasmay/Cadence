@@ -9,10 +9,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const { seed, getFamousQuote, postMyQuote, getMyQuotes, findQuotes } = require("./controller");
+const { seed, getFamousQuote, postMyQuote, getMyQuotes, findQuotes, deleteUserData } = require("./controller");
 
 // DEV
 app.post("/seed-my-database", seed);
+// app.delete("/delete-test-user-data", deleteUserData)
 
 // Famous Quote Endpoints
 app.get("/api/get-famous-quote", getFamousQuote);

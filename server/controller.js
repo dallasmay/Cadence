@@ -103,6 +103,7 @@ module.exports = {
                 res.status(200).send(dbRes[0]);
             }).catch((err) => console.log(`There is an error with Source: Input & Speaker: Input search, ${err}`));
         }
-    }
+    },
+    deleteUserData: (req, res) => {sequelize.query(`DELETE FROM test_user WHERE speaker = 'Cabbage Man' OR speaker = 'Wit';`).then(() => {res.status(200).send()})}
 
 }

@@ -62,8 +62,8 @@ const postQuote = (e) => {
     speakerContentDiv.appendChild(speakerWordsContent)
     container.appendChild(speakerContentDiv);
     // Adding text content
-    quoteWordsContent.textContent = `${quoteContent}`;
-    speakerWordsContent.textContent = `${speakerContent}`
+    quoteWordsContent.textContent = `"${quoteContent}"`;
+    speakerWordsContent.textContent = `-${speakerContent}`
     // Adding card to container
     myQuoteContainer.appendChild(container)
     // Clearing content after submit and closing modal
