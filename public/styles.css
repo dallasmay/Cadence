@@ -160,7 +160,7 @@ a, a:hover, a:focus, a:active {
 } */
 #add-quote-button {
     font-family: 'Helvetica', serif;
-    font-size: 24pt;
+    font-size: 32px;
     padding: 7px;
     padding-left: 25px;
     padding-right: 25px;
@@ -414,6 +414,10 @@ select {
     margin: 0px 0px 0px 10px;
     font-size: 14pt;
 }
+/* Hamburger */
+.hamburger {
+    display: none;
+}
 
 @media (max-width: 900px) {
     #nav-links {
@@ -421,8 +425,8 @@ select {
     }
     #nav-wrapper {
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
+        justify-content: space-between;
+        align-items: center;
         /* height: 90px; */
         background-color: #1B1B1E;
         border-radius: 0px 0px 20px 20px;
@@ -430,12 +434,47 @@ select {
     }
     #logo {
         font-size: 45px;
-        padding: 0px;
+        padding: 15px 0px 0px 0px;
     }
+    #logo:hover {
+    position: relative;
+    bottom: 10px;
+    font-family: 'Charis SIL', serif;
+    font-size: 45px;
+    color: #D8DBE2;
+    cursor: pointer;
+}
     #find-quotes-control-bar {
         display: block;
     }
     #control-bar-header {
         display: block;
     }
+    .hamburger {
+        display: inline;
+        /* position: absolute; */
+        color: #D8DBE2;
+        font-size: 2.4rem;
+        padding-left: 15px;
+        cursor: pointer;
+    }
+    #add-quote-button {
+    font-family: 'Helvetica', serif;
+    font-size: 32px;
+    padding: 7px 20px;
+    border-radius: 15px;
+    background-color: #1B1B1E;
+    color: #D8DBE2;
+    height: 50px;
+    border: none;
+    }
+    #add-quote-button:hover {
+    font-family: 'Helvetica', serif;
+    padding: 7px 20px;
+    border-radius: 15px;
+    background-color: #313136;
+    color: #D8DBE2;
+    cursor: pointer;
+    }
+    
 }
